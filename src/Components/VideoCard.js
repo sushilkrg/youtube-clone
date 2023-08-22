@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const VideoCard = ({ info }) => {
   // console.log(info);
   const { snippet, statistics } = info;
@@ -16,5 +17,15 @@ const VideoCard = ({ info }) => {
     </div>
   );
 };
+
+// Higher order component (takes component as parameter or return component)
+export const AdVideoCard = ({info}) => {
+
+  return (
+    <div className="border border-red-600">
+      <VideoCard info={info}/>
+    </div>
+  );
+}
 
 export default VideoCard;
